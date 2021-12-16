@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* note */
+}
+
+body {
+  background-color: #FFFDEB;
+  max-width: 1080px;
+  max-height: 100%;
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'footer';
+  grid-template-rows: 125px 0.1fr 4fr 100px;
+  grid-gap: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.grid-container > * {
+  background-color: #FFFDEB;
+  padding: 15px 0;
+}
+
+.links {
+	font-size: 1.2em;
+	font-weight: 900;
+  font-family: Helvetica, sans-serif;
+}
+.links > a {
+	color: #4B4B4B;
+	text-decoration: none;
+}
+.links > a:hover {
+	color: #EB5858;
+}
+
+.links > a:active {
+  color: #ffffff;
+}
+
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+
+.projects {
+  text-align: center;
+  border-left: #EB5858 solid 3px;
+  border-right: #EB5858 solid 3px;
+}
+
+.contact {
+  text-align: right;
+}
+
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+
+.mainbox {
+  padding-top: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.work {
+  padding-top: 80px;
+}
+
+.about {
+  padding-top: 80px;
+}
+
+.checkout {
+  padding-top: 80px;
+}
+
+footer {
+  opacity: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul > a:hover {
+  color: #EB5858;
+}
+
+.socials > * {
+  display: inline;
+  margin: 2em;
+}
+
+.maincontact {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.name {
+  font-weight: 900;
+}
+
+.email {
+  font-weight: lighter;
+}
+
+.phone {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.me {
+  max-width: 300px;
+}
+
+@media screen and (min-width:600px){
+
+  .grid-container {
+    grid-template-rows: 140px 0.1fr 4fr 150px;
+  }
+
+  .logo {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .welcome {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .work {
+    max-width: 50%;
+    float: right;
+    padding-top: 100px;
+  }
+
+  .about {
+    max-width: 50%;
+    float: left;
+    padding-top: 100px;
+  }
+
+  .checkout {
+    max-width: 40%;
+    float: right;
+    padding-top: 200px;
+  }
+
+  .projectmain > * {
+    max-width: 49.5%;
+    padding-top: 50px;
+  }
+
+  .reintext {
+    float: right;
+  }
+  
+  .portrait {
+    float: right;
+  }
+
+  .ktext {
+    float: right;
+  }
+
+  .rlogo {
+    float: right;
+  }
+
+  .stelogotext {
+    float: right;
+  }
+
+  .rapper {
+    float: right;
+  }
+}
